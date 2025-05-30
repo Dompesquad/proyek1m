@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Scoring PORSENI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Digital Scoring PORSENI</h1>
+
+    <label for="juri">Nama Juri:</label>
+    <input type="text" id="juri" placeholder="Masukkan nama juri..." />
+
+    <h2>Pilih Cabang Lomba:</h2>
+    <div class="buttons">
+      <button onclick="goToLomba('futsal')">Futsal</button>
+      <button onclick="goToLomba('voli')">Voli</button>
+      <button onclick="goToLomba('bulutangkis')">Bulutangkis</button>
+      <button onclick="goToLomba('takraw')">Takraw</button>
+    </div>
+  </div>
+
+  <script>
+    function goToLomba(lomba) {
+      const juri = document.getElementById("juri").value.trim();
+      if (!juri) {
+        alert("Silakan masukkan nama juri terlebih dahulu.");
+        return;
+      }
+
+      window.location.href = `/lomba/${lomba}/penilaian-${lomba}.html?juri=${encodeURIComponent(juri)}`;
+    }
+  </script>
+</body>
+</html>
