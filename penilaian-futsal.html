@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Penilaian Futsal</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body class="futsal">
+  <div class="overlay">
+    <h1>Penilaian Futsal</h1>
+    <p id="juri-info"></p>
+
+    <div class="match">
+      <h2>Match 1: VII.1 vs VII.2</h2>
+      <label>Skor VII.1: <input type="number" id="skor-vii1-1" /></label>
+      <label>Skor VII.2: <input type="number" id="skor-vii2-1" /></label>
+    </div>
+
+    <div class="match">
+      <h2>Match 2: VIII.1 vs VIII.2</h2>
+      <label>Skor VIII.1: <input type="number" id="skor-viii1-1" /></label>
+      <label>Skor VIII.2: <input type="number" id="skor-viii2-1" /></label>
+    </div>
+
+    <button onclick="simpanSkor()">Simpan Nilai</button>
+  </div>
+
+  <script src="../../firebase-init.js"></script>
+  <script src="penilaian-futsal.js"></script>
+</body>
+</html>
